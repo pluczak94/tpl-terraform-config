@@ -1,0 +1,15 @@
+steps:
+  - name: 'hashicorp/terraform:1.0.0'
+    args:
+      - '-c'
+      - |
+        terraform init
+    id: tf init
+    entrypoint: sh
+  - name: 'hashicorp/terraform:1.0.0'
+    args:
+      - '-c'
+      - |
+        terraform destroy -auto-approve
+    id: tf destroy
+    entrypoint: sh
