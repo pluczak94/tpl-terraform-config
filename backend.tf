@@ -1,5 +1,5 @@
 terraform {
   backend "gcs" {
-    bucket = "tcl-execrcies-tfstate"
+    bucket = "tcl-exercises-tfstate"
   }
 }

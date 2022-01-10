@@ -1,12 +1,21 @@
 steps:
-  - name: 'hashicorp/terraform:1.0.0'
+  - name: alpine
+    args:
+      - '-c'
+      - |
+        echo "***********************"
+        echo "$BRANCH_NAME"
+        echo "***********************"
+    id: branch name
+    entrypoint: sh
+  - name: 'hashicorp/terraform:1.1.3'
     args:
       - '-c'
       - |
         terraform init
     id: tf init
     entrypoint: sh
-  - name: 'hashicorp/terraform:1.0.0'
+  - name: 'hashicorp/terraform:1.1.3'
     args:
       - '-c'
       - |

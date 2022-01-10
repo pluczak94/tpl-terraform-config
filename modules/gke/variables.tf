@@ -7,6 +7,7 @@ variable "env" {
 }
 variable "region" {}
 variable "network" {}
+variable "cluster_sa" {}
 variable "subnetwork" {}
 variable "ip_range_pods_name" {
   description = "The secondary ip range to use for pods"
